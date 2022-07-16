@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	 <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"/>
+
+	<title>Calculator</title>
+
+	<script>
+		
+		function calc()
+		{
+
+			var n1 = parseFloat(document.getElementById('n1').value);
+			var n2 = parseFloat(document.getElementById('n2').value);
+
+			var oper = document.getElementById('operators').value;
+
+			if (oper ==='+')
+			{
+				document.getElementById('result').value = n1+n2;
+			}
+
+			if (oper ==='-')
+			{
+				document.getElementById('result').value = n1-n2;
+			}
+
+			if (oper ==='*')
+			{
+				document.getElementById('result').value = n1*n2;
+			}
+
+			if (oper ==='/')
+			{
+				document.getElementById('result').value = n1/n2;
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<header>
+		<!-- navbar ni diri-->
+		<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content para ni sa color2 sa ibabaw -->
+		</nav>
+
+		<nav class="navbar navbar-dark bg-primary">
+		  <!-- Navbar content -->
+		</nav>
+
+		  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+		    <div class="container-fluid">
+
+		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		            <a class="navbar-brand">CalCu</a>
+
+		          <li class="nav-item active">
+		            <a class="nav-link" aria-current="page" href="#">Home</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Features</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Pricing</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">About</a>
+		          </li>
+		        </ul>
+		        
+		      </div>
+		        <form class="d-flex">
+		          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		          <button class="btn btn-outline-success" type="submit">Search</button>
+		        </form>
+		    </div>
+		  </nav>
+
+		  <!-- Navbar -->
+
+	<!-- Mag gamit ko og jumbotron -->
+
+	<div class="p-5 text-center bg-light">
+		<h1 class="mb-3">Calculator</h1>
+
+		<div class="container">
+			<div class="alert alert-info">
+				<strong>Info!</strong> Input Numbers on textboxes and choose operators using the dropdown menu to calculate the given numbers.
+			</div>
+
+			<input class="form-control form-control-lg" id="n1" />
+
+			<h3>
+				<select id="operators" class="dropdown-item">
+					<option value="+" align="center">+</option>
+					<option value="-" align="center">-</option>
+					<option value="*" align="center">*</option>
+					<option value="/" align="center">/</option>
+				</select>
+			</h3>
+
+			<input class="form-control form-control-lg" id="n2" />
+
+			<button class="btn btn-primary btn-block mb-3 mt-3" onclick="calc();">Calculate</button>
+
+			<p> <h4> Answer : <input class="alert alert-success" size="50%" id="result"> 
+			</p></h4><br>
+
+
+		</div>
+
+		</header>
+
+	</div>
+
+
+  <!-- simple footer rani diri ehheh -->
+	<footer class="bg-dark text-center text-white"> 
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				Copyright 2022, Princess Therese C. Singcol. All Rights Reserved.
+			</div>
+	</footer>
+
+
+</body>
+</html>
